@@ -6,7 +6,7 @@ shuffle_url = "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1"
 shuffle = requests.get(shuffle_url)
 deck_id = shuffle.json()["deck_id"]
 
-number_of_cards = 2
+number_of_cards = 5
 draw_url = f"https://deckofcardsapi.com/api/deck/{deck_id}/draw/?count={number_of_cards}"
 drawn_cards = requests.get(draw_url).json()
 
